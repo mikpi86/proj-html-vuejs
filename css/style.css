@@ -75,6 +75,21 @@ section > h5 {
     color: #ae8652;
 }
 
+.services-card > h4 {
+    margin: 30px 0;
+    font-family: 'Abril Fatface', cursive;
+    font-size: 1.2em;
+    font-weight: lighter;
+    text-transform: capitalize;
+    color: #ae8652;
+}
+
+p {
+    font-family: 'Mukta',
+    sans-serif;
+    color: #505050;
+}
+
 /* END utility */
 
 /* header */
@@ -139,7 +154,6 @@ header {
         justify-content: center;
     }
     .ms-hero > .ms-hero-left > p {
-        font-family: 'Mukta', sans-serif;
         font-size: 1.2em;
         font-stretch: expanded;
         text-transform: capitalize;
@@ -180,6 +194,39 @@ header {
     section.services {
         width: 100%;
         padding-top: 20px;
+        padding-bottom: 100px;
+        position: relative;
+    }
+    section.services > .services-card-container {
+        display: flex;
+        justify-content: space-around;
+    }
+        /* gestione cards */
+        .services-card {
+            padding: 40px;
+        }
+        .services-card > img {
+            height: 100px;
+        }
+        .services-card > p {
+            font-size: 0.8em;
+            font-stretch: expanded;
+            color: #88928f;
+        }
+        /* END gestione cards */
+
+    /* gestione triangolo nero tra section services e products */
+    /* NOTA: mio schermo 14'', le misure fisse non si adattano a schermi diversi */
+    section.services:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 0;
+        height: 0;
+        border-bottom: 80px solid #191817;
+        border-left: 760px solid transparent;
+        border-right: 760px solid transparent;
     }
     /* END section SERVICES */
 

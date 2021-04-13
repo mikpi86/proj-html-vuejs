@@ -7,13 +7,17 @@
     <!-- link a vue js -->
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     <!-- link al google font -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Khula:wght@300;400;700&family=Mukta:wght@300;400;700&display=swap" rel="stylesheet">
+        <!-- Khula e Mukta -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Khula:wght@300;400;700&family=Mukta:wght@300;400;700&display=swap" rel="stylesheet">
+        <!-- Cantata One e Imbue -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Cantata+One&family=Imbue:wght@700&display=swap" rel="stylesheet">
+        <!-- Abril Fatface -->   
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
     <!-- link al fontawesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
-
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Cantata+One&family=Imbue:wght@700&display=swap" rel="stylesheet">
     <!-- link al css -->
     <link rel="stylesheet" href="css/style.css">
     <title>Avada Barbers</title>
@@ -68,26 +72,47 @@
 
         <main>
 
+            <!-- SEZIONE AWARD -->
             <section class="award">
                 <h5>award winning</h5>
                 <h2>Pro barbers</h2>
                 <div class="ms-button">Meet your new barber</div>
             </section> <!-- chiusura award -->
-     
-            <section class="services debug">
+
+            <!-- SEZIONE SERVICES -->
+            <section class="services">
                 <h5>mens grooming</h5>
                 <h2>services</h2>
-                <div>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi nobis mollitia veritatis deserunt hic sequi eligendi
-                    cumque natus enim quod dolores itaque, ea, est id ad tempore. Debitis, doloribus quae?
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, placeat, ea aliquid maxime facere odit ab
-                    delectus
-                    cum, voluptas eligendi molestias perferendis. Nostrum ipsum provident, in recusandae consectetur neque incidunt?
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, vel officiis eos omnis cumque rem dolor minima
-                    molestiae similique laboriosam, impedit sint suscipit? Fugit corrupti unde sapiente, optio repellat enim?
-                </div>
+
+                <div class="ms-wrapper services-card-container">
+
+                    <!-- card sx -->
+                    <div class="services-card">
+                        <img src="img/avadabarbers-trimcut-icon-before.png" alt="trimcut-icon">
+                        <h4>Trim &amp; Cut</h4>
+                        <p>Avada Barbers are experts in the lickety split trim and hair cut. Quick but careful and ridiculously good looking.</p>
+                    </div>
+
+                    <!-- card centrale -->
+                    <div class="services-card">
+                        <img src="img/avadabarbers-washndry-icon.png" alt="washndry-icon">
+                        <h4>Wash &amp; Dry</h4>
+                        <p>Take a seat in our fine leather chairs, lean back and let us lather you a fresh head in a luxurious fashion.</p>
+                    </div>
+
+                    <!-- card dx -->
+                    <div class="services-card">
+                        <img src="img/avadabarbers-beardtrim-icon.png" alt="beardtrim-icon">
+                        <h4>Beard Tidy</h4>
+                        <p>Tame the tangles and untidy facial hairs like a gentleman with our Beard Tidy services from Avada Barbers.</p>
+                    </div>
+                    
+                </div> <!-- chiusura ms-wrapper services-card-container -->
+
+                <div class="ms-button">read about our services</div>
             </section> <!-- chiusura services -->
 
+            <!-- SEZIONE PRODUCTS -->
             <section class="products debug">
                 <h5>we have you covered</h5>
                 <h2>avada grooming products</h2>
@@ -102,6 +127,7 @@
                 </div>
             </section> <!-- chiusura products -->
 
+            <!-- SEZIONE REVIEWS -->
             <section class="reviews debug">
                 <h5>what people say</h5>
                 <h2>reviews</h2>
@@ -115,6 +141,7 @@
                 </div>
             </section> <!-- chiusura reviews -->
 
+            <!-- SEZIONE RECENT BLOG POSTS -->
             <section class="recent-blog-posts debug">
                 <h5>tales from the barber shop</h5>
                 <h2>recent blog posts</h2>
