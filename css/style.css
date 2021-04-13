@@ -46,6 +46,10 @@ li {
     display: inline-block;
 }
 
+section {
+    text-align: center;
+}
+
 h1,
 section > h2 {
     font-family: 'Imbue', serif;
@@ -149,14 +153,44 @@ header {
     /* section AWARD */
     section.award {
         width: 100%;
-        height: 500px;
+        height: 440px;
         padding-top: 100px;
         background-image: url(../img/avadabarbers-about-introbackground.jpg);
         background-repeat: no-repeat;
         background-size: cover;
         text-align: center;
+        position: relative;
     }
+        /* gestione triangolo bianco tra section award e services */
+        /* NOTA: mio schermo 14'', le misure fisse non si adattano a schermi diversi */
+        section.award:after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0;
+            height: 0;
+            border-bottom: 80px solid white;
+            border-left: 760px solid transparent;
+            border-right: 760px solid transparent;    
+        }
     /* END section AWARD */
+    
+    /* section SERVICES */
+    section.services {
+        width: 100%;
+        padding-top: 20px;
+    }
+    /* END section SERVICES */
+
+    /* section PRODUCTS */
+    /* END section PRODUCTS */
+
+    /* section REVIEWS */
+    /* END section REVIEWS */
+
+    /* section RECENT-BLOG-POSTS */
+    /* END section RECENT-BLOG-POSTS */
 
 /* END main */
 
