@@ -4,6 +4,17 @@ var app = new Vue ({
 
     data: {
 
+        headerMenu: {
+
+            logo: 'img/avadabarbers-logo-x2-300x104.png',
+
+            links: [
+                'fas fa-shopping-cart',
+                'fas fa-bars'
+            ]
+
+        }
+
     }
 
 });

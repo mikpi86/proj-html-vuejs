@@ -7,7 +7,10 @@
     <!-- link a vue js -->
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     <!-- link al google font -->
-
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Khula:wght@300;400;700&family=Mukta:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- link al fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
     <!-- link al css -->
     <link rel="stylesheet" href="css/style.css">
     <title>Avada Barbers</title>
@@ -20,17 +23,38 @@
 
             <div class="ms-wrapper">
     
-                <nav class="debug">
-    
+                <nav>
+                    <ul>
+                        <li class="header-logo">
+                            <img :src="headerMenu.logo" :alt="headerMenu.logo">
+                        </li>
+                        <li class="menu-items">
+                            <div v-for="link in headerMenu.links">
+                                <!-- stampa icone menu -->
+                                <i :class="link"></i>
+                            </div>
+                        </li>
+                    </ul>
                 </nav> <!-- chiusura nav -->
     
                 <div class="ms-hero">
 
-                    <div class="ms-hero-left debug">
-
+                    <div class="ms-hero-left">
+                        <!-- titolo principale -->
+                        <h1>Barber Shop</h1>
+                        <!-- separatore -->
+                        <div class="separator"></div>
+                        <!-- testo -->
+                        <p class="flint">The pinnacle of male grooming</p>
+                        <!-- bottone -->
+                        <div class="button-container">
+                            <!-- bottone all'interno di un container perché col flex non mi prendeva il display inline-block -->
+                            <div class="ms-button">Learn more</div>
+                        </div>
                     </div> <!-- chiusura ms-hero-left -->
 
-                    <div class="ms-hero-right debug">
+                    <div class="ms-hero-right">
+                        <img src="img/avadabarbers_hero_focalmirror-800x1100.png" alt="">
 
                     </div> <!-- chiusura ms-hero-right -->
     
