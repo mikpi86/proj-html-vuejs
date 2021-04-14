@@ -32,6 +32,9 @@ body {
     .background-driftwood {
         background-color: #ae8652;
     }
+    .background-ebb {
+        background-color: #eae8e6;
+    }
     /* END colors */
 
     /* flex */
@@ -345,6 +348,22 @@ header {
     /* END section REVIEWS */
 
     /* section RECENT-BLOG-POSTS */
+    section.recent-blog-posts .recent-post-card {
+        margin-top: 20px;
+        padding: 0 20px;
+    }
+
+        /* gestione recent post cards */
+        .recent-post-card > img {
+            width: 100%;
+        }
+        .recent-post-card > p {
+            font-size: 0.8em;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        /* END gestione recent post cards */
+
     /* END section RECENT-BLOG-POSTS */
 
 /* END main */
