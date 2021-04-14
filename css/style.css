@@ -29,6 +29,12 @@ body {
         border-color: #ae8652;
         color: #ae8652;
     }
+        /* button in hover */
+        .ms-button-driftwood:hover {
+            border-color: #65401e;
+            color: #65401e;
+        }
+        /* END button in hover */
     .background-driftwood {
         background-color: #ae8652;
     }
@@ -56,7 +62,38 @@ body {
     .align-center {
         align-items: center;
     }
+    .flex-column {
+        flex-direction: column;
+    }
     /* END flex */
+
+    /* button */
+    .ms-button {
+        padding: 10px 30px;
+        border: 3px solid;
+        font-family: 'Lato', sans-serif;
+        font-size: 15px;
+        font-weight: bold;
+        text-transform: uppercase;
+        cursor: pointer;
+        display: inline-block;
+    }
+    /* END button */
+
+    /* fonts */
+    h1,
+    h2,
+    h3,
+    h4 {
+        font-family: 'Abril Fatface', cursive;
+    }
+    
+    h5,
+    h6,
+    p {
+        font-family: 'Lato', sans-serif;   
+    }
+    /* END fonts */
 
 li {
     list-style: none;
@@ -67,34 +104,20 @@ li {
     height: 4px;
 }
 
-/* button */
-.ms-button {
-    padding: 10px 30px;
-    border: 3px solid;
-    font-family: 'Khula',
-    sans-serif;
-    font-size: 15px;
-    font-weight: bold;
-    text-transform: uppercase;
-    cursor: pointer;
-    display: inline-block;
-}
-/* END button */
-
 section {
     text-align: center;
 }
 
+
 h1,
 h2 {
-    font-family: 'Imbue', serif;
     text-transform: capitalize;
 }
 
 h1 {
-    font-size: 6em;
-    font-weight: 700;
-    color: white;
+    font-size: 4.6em;
+    font-weight: lighter;
+    color: #dddddd;
 }
 
 h2 {
@@ -106,15 +129,13 @@ h2 {
 
 h4 {
     margin: 20px 0;
-    font-family: 'Abril Fatface', cursive;
-    font-size: 1.2em;
+    font-size: 1.6em;
     font-weight: lighter;
     text-transform: capitalize;
     color: #ae8652;
 }
 
 h5 {
-    font-family: 'Khula', sans-serif;
     font-size: 0.8em;
     font-weight: bold;
     text-transform: uppercase;
@@ -122,17 +143,13 @@ h5 {
 }
 
 h6 {
-    font-family: 'Mukta',
-    sans-serif;
     font-style: italic;
-    font-weight: bold;
     text-transform: capitalize;
     color: #ae8652;
 }
 
 p {
-    font-family: 'Mukta',
-    sans-serif;
+    font-size: 0.9em;
     color: #505050;
 }
 
@@ -153,6 +170,7 @@ header {
     nav,
     nav img {
         height: 70px;
+        cursor: pointer;
     }
     nav li {
         display: inline-block;
@@ -170,6 +188,9 @@ header {
         margin-left: 20px;
         cursor: pointer;
     }
+    nav .menu-items i:hover {
+        color: #ae8652;
+    }
     
     /* END nav */
 
@@ -185,9 +206,6 @@ header {
         height: 100%;
     }
 
-    .ms-hero > .ms-hero-left {
-        flex-direction: column;
-    }
     .ms-hero > .ms-hero-left > p {
         font-size: 1.2em;
         font-stretch: expanded;
@@ -211,7 +229,6 @@ header {
         position: relative;
     }
         /* gestione triangolo bianco tra section award e services */
-        /* NOTA: mio schermo 14'', le misure fisse non si adattano a schermi diversi. Questa "soluzione" fa comparire la barra di scroll in basso. */
         section.award:after {
             content: "";
             position: absolute;
@@ -220,8 +237,8 @@ header {
             width: 0;
             height: 0;
             border-bottom: 80px solid white;
-            border-left: 760px solid transparent;
-            border-right: 760px solid transparent;    
+            border-left: 50vw solid transparent;
+            border-right: 50vw solid transparent;    
         }
     /* END section AWARD */
     
@@ -241,14 +258,12 @@ header {
             height: 100px;
         }
         .services-card > p {
-            font-size: 0.8em;
             font-stretch: expanded;
             color: #88928f;
         }
         /* END gestione services cards */
 
         /* gestione triangolo nero tra section services e products */
-        /* NOTA: mio schermo 14'', le misure fisse non si adattano a schermi diversi. Questa "soluzione" fa comparire la barra di scroll in basso. */
         section.services:after {
             content: "";
             position: absolute;
@@ -257,8 +272,8 @@ header {
             width: 0;
             height: 0;
             border-bottom: 80px solid #111110;
-            border-left: 760px solid transparent;
-            border-right: 760px solid transparent;
+            border-left: 50vw solid transparent;
+            border-right: 50vw solid transparent;
         }
     /* END section SERVICES */
 
@@ -279,9 +294,6 @@ header {
         /* gestione product cards */
         .product-card > img {
             width: 90%;
-        }
-        .product-card > p {
-            font-weight: lighter;
         }
         /* END gestione product cards */
 
@@ -315,9 +327,6 @@ header {
     }
     .months-featured-product-text > p {
         margin-top: 20px;
-        font-weight: lighter;
-        font-size: 0.8em;
-        font-stretch: expanded;
         color: #88928f;
     }
     .months-featured-product-text > .ms-button {
@@ -328,13 +337,13 @@ header {
     /* section REVIEWS */
     section.reviews {
         padding-top: calc((300px - 50px) + 100px);
+        position: relative;
     }
         /* gestione reviews cards */
         .reviews-card {
             padding: 20px;
         }
         .reviews-card > p {
-            font-size: 0.8em;
             text-align: center;
             margin-bottom: 20px;
         }
@@ -345,9 +354,27 @@ header {
         }
         /* END gestione reviews cards */
 
+        /* gestione triangolo bianco tra section reviews e recent blog posts */
+        section.reviews:after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -80px;
+            width: 0;
+            height: 0;
+            border-top: 80px solid white;
+            border-left: 50vw solid transparent;
+            border-right: 50vw solid transparent;
+        }
+
     /* END section REVIEWS */
 
     /* section RECENT-BLOG-POSTS */
+    section.recent-blog-posts {
+        padding-top: calc(80px + 100px);
+        padding-bottom: 100px;
+    }
+
     section.recent-blog-posts .recent-post-card {
         margin-top: 20px;
         padding: 0 20px;
@@ -358,7 +385,6 @@ header {
             width: 100%;
         }
         .recent-post-card > p {
-            font-size: 0.8em;
             text-align: center;
             margin-bottom: 20px;
         }
@@ -372,6 +398,25 @@ header {
 
 footer {
     width: 100%;
+}
+
+footer > .main-footer {
+    background-color: #111110;
+    color: #505050;
+    padding: 80px 0;
+}
+.main-footer img {
+    width: 80%;
+}
+.main-footer .button-container {
+    margin-top: 20px;
+}
+
+footer > .copyright {
+    background-color: #191817;
+    color: #505050;
+    text-align: center;
+    padding: 20px 0;
 }
 
 /* END footer */

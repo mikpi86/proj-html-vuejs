@@ -7,15 +7,8 @@
     <!-- link a vue js -->
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     <!-- link al google font -->
-        <!-- Khula e Mukta -->
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Khula:wght@300;400;700&family=Mukta:wght@300;400;700&display=swap" rel="stylesheet">
-        <!-- Cantata One e Imbue -->
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Cantata+One&family=Imbue:wght@700&display=swap" rel="stylesheet">
-        <!-- Abril Fatface -->   
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Lato:ital,wght@0,100;0,300;0,400;0,700;1,300;1,400&display=swap" rel="stylesheet">
     <!-- link al fontawesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
     <!-- link al css -->
@@ -46,7 +39,7 @@
     
                 <div class="ms-hero flex">
 
-                    <div class="ms-hero-left flex centered">
+                    <div class="ms-hero-left flex flex-column centered">
                         <!-- titolo principale -->
                         <h1>Barber Shop</h1>
                         <!-- separatore -->
@@ -57,7 +50,7 @@
                         <div class="button-container">
                             <!-- bottone all'interno di un container perché col flex non mi prendeva il display inline-block -->
                             <div class="ms-button ms-button-driftwood margin-20-0">Learn more</div>
-                        </div>
+                        </div> <!-- chiusura button container -->
                     </div> <!-- chiusura ms-hero-left -->
 
                     <div class="ms-hero-right flex">
@@ -237,8 +230,32 @@
 
         <footer>
 
-            <div class="main-footer debug">
-                FOOTER
+            <div class="main-footer">
+
+                <div class="ms-wrapper flex space-between">
+
+                    <div class="footer-left flex flex-column align-center">
+                        <img :src="footerMenu.footerShop" :alt="footerMenu.footerShop">
+                        <div class="button-container">
+                            <!-- bottone all'interno di un container perché col flex non mi prendeva il display inline-block -->
+                            <div class="ms-button ms-button-driftwood">shop our range now</div>
+                        </div> <!-- chiusura button container -->
+                    </div> <!-- chiusura footer left -->
+
+                    <div class="footer-center flex flex-column">
+
+                    </div> <!-- chiusura footer center -->
+
+                    <div class="footer-right flex flex-column align-center">
+                        <img :src="footerMenu.footerAppointment" :alt="footerMenu.footerAppointment">
+                        <div class="button-container">
+                            <!-- bottone all'interno di un container perché col flex non mi prendeva il display inline-block -->
+                            <div class="ms-button ms-button-driftwood">book your appointment</div>
+                        </div> <!-- chiusura button container -->
+                    </div> <!-- chiusura footer right -->
+
+                </div> <!-- chiusura ms-wrapper -->
+
             </div> <!-- chiusura main-footer -->
 
             <div class="copyright debug">

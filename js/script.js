@@ -13,6 +13,14 @@ var app = new Vue ({
                 'fas fa-bars'
             ]
 
+        },
+
+        footerMenu: {
+
+            footerShop: 'img/avadabarbers_footer_shop_image-400x312.png',
+
+            footerAppointment: 'img/avadabarbers_footer_appointment_image-400x312.png'
+
         }
 
     }
