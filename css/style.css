@@ -7,8 +7,11 @@
 /* utility */
 
     /* colors */
-    .flint {
+    .color-flint {
         color: #69625c;
+    }
+    .color-driftwood {
+        color: #ae8652;
     }
     /* END colors */
 
@@ -51,7 +54,7 @@ section {
 }
 
 h1,
-section > h2 {
+h2 {
     font-family: 'Imbue', serif;
     text-transform: capitalize;
 }
@@ -62,21 +65,23 @@ h1 {
     color: white;
 }
 
-section > h2 {
-    font-size: 4em;
+h2 {
+    font-size: 3em;
     font-weight: 700;
     color: #b0b0b0;
+    margin: 5px 0;
 }
 
-section > h5 {
+h5 {
     font-family: 'Khula', sans-serif;
+    font-size: 0.8em;
     font-weight: bold;
     text-transform: uppercase;
     color: #ae8652;
 }
 
-.services-card > h4 {
-    margin: 30px 0;
+h4 {
+    margin: 20px 0;
     font-family: 'Abril Fatface', cursive;
     font-size: 1.2em;
     font-weight: lighter;
@@ -167,8 +172,8 @@ header {
     /* section AWARD */
     section.award {
         width: 100%;
-        height: 440px;
         padding-top: 100px;
+        padding-bottom: 150px;
         background-image: url(../img/avadabarbers-about-introbackground.jpg);
         background-repeat: no-repeat;
         background-size: cover;
@@ -176,7 +181,7 @@ header {
         position: relative;
     }
         /* gestione triangolo bianco tra section award e services */
-        /* NOTA: mio schermo 14'', le misure fisse non si adattano a schermi diversi */
+        /* NOTA: mio schermo 14'', le misure fisse non si adattano a schermi diversi. Questa "soluzione" fa comparire la barra di scroll in basso. */
         section.award:after {
             content: "";
             position: absolute;
@@ -194,14 +199,14 @@ header {
     section.services {
         width: 100%;
         padding-top: 20px;
-        padding-bottom: 100px;
+        padding-bottom: 150px;
         position: relative;
     }
     section.services > .services-card-container {
         display: flex;
         justify-content: space-around;
     }
-        /* gestione cards */
+        /* gestione services cards */
         .services-card {
             padding: 40px;
         }
@@ -213,27 +218,95 @@ header {
             font-stretch: expanded;
             color: #88928f;
         }
-        /* END gestione cards */
+        /* END gestione services cards */
 
-    /* gestione triangolo nero tra section services e products */
-    /* NOTA: mio schermo 14'', le misure fisse non si adattano a schermi diversi */
-    section.services:after {
-        content: "";
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        width: 0;
-        height: 0;
-        border-bottom: 80px solid #191817;
-        border-left: 760px solid transparent;
-        border-right: 760px solid transparent;
-    }
+        /* gestione triangolo nero tra section services e products */
+        /* NOTA: mio schermo 14'', le misure fisse non si adattano a schermi diversi. Questa "soluzione" fa comparire la barra di scroll in basso. */
+        section.services:after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0;
+            height: 0;
+            border-bottom: 80px solid #111110;
+            border-left: 760px solid transparent;
+            border-right: 760px solid transparent;
+        }
     /* END section SERVICES */
 
     /* section PRODUCTS */
+    section.products {
+        width: 100%;
+        padding-top: 80px;
+        padding-bottom: 150px;
+        background-image: url(../img/avadabarbers-reviewsbackground.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        text-align: center;
+        position: relative;
+    }
+    section.products > .products-container {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
+        /* gestione product cards */
+        .product-card > img {
+            width: 90%;
+        }
+        .product-card > p {
+            font-weight: lighter;
+        }
+        /* END gestione product cards */
+
+    section.products > .months-featured-product {
+        width: 900px;
+        background-color: #111110;
+        border-top: 3px solid #ae8652;
+        position: absolute;
+        bottom: calc(50px - 300px);
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+    }
+    .months-featured-product-img {
+        width: auto;
+        height: 100%;
+        background-image: url(../img/avadabarbers-cta-background.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .months-featured-product-img > img {
+        width: 100%;
+    }
+
+    .months-featured-product-text {
+        width: calc(100% - 300px);
+        height: 100%;
+        padding: 40px;
+        display: inline-block;
+        text-align: left;
+    }
+    .months-featured-product-text > p {
+        margin-top: 20px;
+        font-weight: lighter;
+        font-size: 0.8em;
+        font-stretch: expanded;
+        color: #88928f;
+    }
+    .months-featured-product-text > .ms-button {
+        margin-bottom: 0;
+    }
     /* END section PRODUCTS */
 
     /* section REVIEWS */
+    section.reviews {
+        padding-top: calc(300px - 50px);
+    }
     /* END section REVIEWS */
 
     /* section RECENT-BLOG-POSTS */
