@@ -31,11 +31,11 @@
             <div class="ms-wrapper">
     
                 <nav>
-                    <ul>
+                    <ul class="flex space-between">
                         <li class="header-logo">
                             <img :src="headerMenu.logo" :alt="headerMenu.logo">
                         </li>
-                        <li class="menu-items">
+                        <li class="menu-items flex flex-end align-center">
                             <div v-for="link in headerMenu.links">
                                 <!-- stampa icone menu -->
                                 <i :class="link"></i>
@@ -44,23 +44,23 @@
                     </ul>
                 </nav> <!-- chiusura nav -->
     
-                <div class="ms-hero">
+                <div class="ms-hero flex">
 
-                    <div class="ms-hero-left">
+                    <div class="ms-hero-left flex centered">
                         <!-- titolo principale -->
                         <h1>Barber Shop</h1>
                         <!-- separatore -->
-                        <div class="separator"></div>
+                        <div class="separator background-driftwood margin-20-0"></div>
                         <!-- testo -->
                         <p class="flint">The pinnacle of male grooming</p>
                         <!-- bottone -->
                         <div class="button-container">
                             <!-- bottone all'interno di un container perché col flex non mi prendeva il display inline-block -->
-                            <div class="ms-button">Learn more</div>
+                            <div class="ms-button ms-button-driftwood margin-20-0">Learn more</div>
                         </div>
                     </div> <!-- chiusura ms-hero-left -->
 
-                    <div class="ms-hero-right">
+                    <div class="ms-hero-right flex">
                         <img src="img/avadabarbers_hero_focalmirror-800x1100.png" alt="">
                     </div> <!-- chiusura ms-hero-right -->
     
@@ -76,7 +76,7 @@
             <section class="award">
                 <h5>award winning</h5>
                 <h2>Pro barbers</h2>
-                <div class="ms-button">Meet your new barber</div>
+                <div class="ms-button ms-button-driftwood margin-20-0">Meet your new barber</div>
             </section> <!-- chiusura award -->
 
             <!-- SEZIONE SERVICES -->
@@ -84,7 +84,7 @@
                 <h5>mens grooming</h5>
                 <h2>services</h2>
 
-                <div class="ms-wrapper services-card-container">
+                <div class="ms-wrapper services-card-container flex space-around">
 
                     <!-- card sx -->
                     <div class="services-card">
@@ -109,7 +109,7 @@
 
                 </div> <!-- chiusura ms-wrapper services-card-container -->
 
-                <div class="ms-button">read about our services</div>
+                <div class="ms-button ms-button-driftwood margin-20-0">read about our services</div>
             </section> <!-- chiusura services -->
 
             <!-- SEZIONE PRODUCTS -->
@@ -117,63 +117,72 @@
                 <h5>we have you covered</h5>
                 <h2>avada grooming products</h2>
 
-                <div class="ms-wrapper products-container">
+                <div class="ms-wrapper products-container flex space-between">
                     <!-- prodotto sx -->
                     <div class="product-card">
                         <img src="img/brush_dark-400x400.png" alt="brush">
                         <h4>brush</h4>
-                        <p class="color-driftwood">&#65284;15.00</p>
+                        <p class="product-price">&#65284;15.00</p>
                     </div>
                     
                     <!-- prodotto centrale sx -->
                     <div class="product-card">
                         <img src="img/scissors-400x400.png" alt="scissors">
                         <h4>scissors</h4>
-                        <p class="color-driftwood">&#65284;85.00</p>
+                        <p class="product-price">&#65284;85.00</p>
                     </div>
                     
                     <!-- prodotto centrale dx -->
                     <div class="product-card">
                         <img src="img/hot_oil_dark-400x400.png" alt="hot oil">
                         <h4>hot oil</h4>
-                        <p class="color-driftwood">&#65284;15.00</p>
+                        <p class="product-price">&#65284;15.00</p>
                     </div>
 
                     <!-- prodotto dx -->
                     <div class="product-card">
                         <img src="img/straight_razor_dark-400x400.png" alt="straight razor">
                         <h4>straight razor</h4>
-                        <p class="color-driftwood">&#65284;30.00</p>
+                        <p class="product-price">&#65284;30.00</p>
                     </div>
 
                 </div> <!-- chiusura ms-wrapper products-container -->
 
-                <div class="ms-button">shop our product range</div>
+                <div class="ms-button ms-button-driftwood margin-20-0">shop our product range</div>
 
-                <div class="months-featured-product">
-                    <div class="months-featured-product-img">
+                <div class="months-featured-product flex">
+                    <div class="months-featured-product-img flex centered align-center">
                         <img src="img/shaving_butter-400x400.png" alt="shaving butter">
                     </div>
                     <div class="months-featured-product-text">
                         <h5>this months featured product</h5>
                         <h2>shaving butter</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem molestias deserunt veniam aperiam eum laborum necessitatibus quisquam eveniet quibusdam quas.</p>
-                        <div class="ms-button">buy now</div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem molestias deserunt veniam aperiam eum laborum necessitatibus quisquam eveniet quibusdam quas lorem.</p>
+                        <div class="ms-button ms-button-driftwood margin-20-0">buy now</div>
                     </div>
                 </div>
             </section> <!-- chiusura products -->
 
             <!-- SEZIONE REVIEWS -->
-            <section class="reviews debug">
+            <section class="reviews">
                 <h5>what people say</h5>
                 <h2>reviews</h2>
-                <div>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi nobis mollitia veritatis deserunt hic sequi eligendi
-                    cumque natus enim quod dolores itaque, ea, est id ad tempore. Debitis, doloribus quae?
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, placeat, ea aliquid maxime facere odit ab delectus
-                    cum, voluptas eligendi molestias perferendis. Nostrum ipsum provident, in recusandae consectetur neque incidunt?
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, vel officiis eos omnis cumque rem dolor minima
-                    molestiae similique laboriosam, impedit sint suscipit? Fugit corrupti unde sapiente, optio repellat enim?
+                <div class="ms-wrapper flex">
+                    <div class="reviews-card">
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora natus maiores amet nemo alias libero officia laboriosam perferendis incidunt maxime, eos nobis culpa delectus quasi fugit adipisci soluta cum quod.</p>
+                        <img src="img/avadabarbers-trimcut-gallery6-200x200.jpg" alt="John Doe">
+                        <h6>john doe</h6>
+                    </div>
+                    <div class="reviews-card">
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora natus maiores amet nemo alias libero officia laboriosam perferendis incidunt maxime, eos nobis culpa delectus quasi fugit adipisci soluta cum quod.</p>
+                        <img src="img/avadabarbers-trimcut-gallery7-200x201.jpg" alt="Pete Jones">
+                        <h6>pete jones</h6>
+                    </div>
+                    <div class="reviews-card">
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora natus maiores amet nemo alias libero officia laboriosam perferendis incidunt maxime, eos nobis culpa delectus quasi fugit adipisci soluta cum quod.</p>
+                        <img src="img/avadabarbers-trimcut-gallery3-200x201.jpg" alt="Mark Wilson">
+                        <h6>mark wilson</h6>
+                    </div>
                 </div>
             </section> <!-- chiusura reviews -->
 

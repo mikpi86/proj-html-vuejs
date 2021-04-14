@@ -6,15 +6,6 @@
 
 /* utility */
 
-    /* colors */
-    .color-flint {
-        color: #69625c;
-    }
-    .color-driftwood {
-        color: #ae8652;
-    }
-    /* END colors */
-
 body {
     font-size: 20px;
 }
@@ -24,6 +15,46 @@ body {
     margin: 0 auto;
 }
 
+    /* margins */
+    .margin-20-0 {
+        margin: 20px 0;
+    }
+    /* END margins */
+
+    /* colors */
+    .product-price {
+        color: #ae8652;
+    }
+    .ms-button-driftwood {
+        border-color: #ae8652;
+        color: #ae8652;
+    }
+    .background-driftwood {
+        background-color: #ae8652;
+    }
+    /* END colors */
+
+    /* flex */
+    .flex {
+        display: flex;
+    }
+    .centered {
+        justify-content: center;
+    }
+    .space-between {
+        justify-content: space-between;
+    }
+    .space-around {
+        justify-content: space-around;
+    }
+    .flex-end {
+        justify-content: flex-end;
+    }
+    .align-center {
+        align-items: center;
+    }
+    /* END flex */
+
 li {
     list-style: none;
 }
@@ -31,23 +62,21 @@ li {
 .separator {
     width: 250px;
     height: 4px;
-    margin: 20px 0;
-    background-color: #ae8652;
 }
 
+/* button */
 .ms-button {
-    margin: 20px 0;
     padding: 10px 30px;
-    border: 3px solid #ae8652;
+    border: 3px solid;
     font-family: 'Khula',
     sans-serif;
     font-size: 15px;
     font-weight: bold;
     text-transform: uppercase;
-    color: #ae8652;
     cursor: pointer;
     display: inline-block;
 }
+/* END button */
 
 section {
     text-align: center;
@@ -72,6 +101,15 @@ h2 {
     margin: 5px 0;
 }
 
+h4 {
+    margin: 20px 0;
+    font-family: 'Abril Fatface', cursive;
+    font-size: 1.2em;
+    font-weight: lighter;
+    text-transform: capitalize;
+    color: #ae8652;
+}
+
 h5 {
     font-family: 'Khula', sans-serif;
     font-size: 0.8em;
@@ -80,11 +118,11 @@ h5 {
     color: #ae8652;
 }
 
-h4 {
-    margin: 20px 0;
-    font-family: 'Abril Fatface', cursive;
-    font-size: 1.2em;
-    font-weight: lighter;
+h6 {
+    font-family: 'Mukta',
+    sans-serif;
+    font-style: italic;
+    font-weight: bold;
     text-transform: capitalize;
     color: #ae8652;
 }
@@ -108,12 +146,7 @@ header {
     background-size: cover;
 }
 
-    /* nav */
-    nav > ul {
-        display: flex;
-        justify-content: space-between;
-    }
-    
+    /* nav */    
     nav,
     nav img {
         height: 70px;
@@ -129,9 +162,6 @@ header {
         font-size: 20px;
         color: white;
         text-align: right;
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
     }
     nav .menu-items i {
         margin-left: 20px;
@@ -144,19 +174,16 @@ header {
     .ms-hero {
         width: 100%;
         height: calc(750px - 70px);
-        display: flex;
     }
 
     .ms-hero > .ms-hero-left,
     .ms-hero > .ms-hero-right {
         width: 50%;
         height: 100%;
-        display: flex;
     }
 
     .ms-hero > .ms-hero-left {
         flex-direction: column;
-        justify-content: center;
     }
     .ms-hero > .ms-hero-left > p {
         font-size: 1.2em;
@@ -202,10 +229,7 @@ header {
         padding-bottom: 150px;
         position: relative;
     }
-    section.services > .services-card-container {
-        display: flex;
-        justify-content: space-around;
-    }
+
         /* gestione services cards */
         .services-card {
             padding: 40px;
@@ -247,8 +271,6 @@ header {
         position: relative;
     }
     section.products > .products-container {
-        display: flex;
-        justify-content: space-between;
         margin-bottom: 20px;
     }
         /* gestione product cards */
@@ -269,7 +291,6 @@ header {
         left: 50%;
         transform: translateX(-50%);
         z-index: 2;
-        display: flex;
     }
     .months-featured-product-img {
         width: auto;
@@ -277,9 +298,6 @@ header {
         background-image: url(../img/avadabarbers-cta-background.jpg);
         background-repeat: no-repeat;
         background-size: cover;
-        display: flex;
-        justify-content: center;
-        align-items: center;
     }
     .months-featured-product-img > img {
         width: 100%;
@@ -306,8 +324,24 @@ header {
 
     /* section REVIEWS */
     section.reviews {
-        padding-top: calc(300px - 50px);
+        padding-top: calc((300px - 50px) + 100px);
     }
+        /* gestione reviews cards */
+        .reviews-card {
+            padding: 20px;
+        }
+        .reviews-card > p {
+            font-size: 0.8em;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .reviews-card > img {
+            width: 30%;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+        /* END gestione reviews cards */
+
     /* END section REVIEWS */
 
     /* section RECENT-BLOG-POSTS */
