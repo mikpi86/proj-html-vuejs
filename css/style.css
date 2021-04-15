@@ -442,19 +442,85 @@ footer > .copyright {
 
 /* elementi FIXED */
 
-#chevron-to-top {
-    width: 40px;
-    height: 30px;
-    background-color: rgba(255,255,255,0.2);
-    color: white;
-    text-align: center;
-    border-top-left-radius: 10%;
-    border-top-right-radius: 10%;
-    padding-top: 5px;
-    cursor: pointer;
-    position: fixed;
-    right: 100px;
-    bottom: 0;
-}
+    /* demos */
+
+    #demos {
+        width: 50px;
+        height: 50px;
+        background-color: white;
+        box-shadow: #505050 0 0 18px 1px;
+        border-radius: 10%;
+        cursor: pointer;
+        padding-top: 30px;
+        position: fixed;
+        top: 200px;
+        right: 10px;
+        z-index: 999;
+    }
+    #demos > img {
+        width: 30%;
+        position: absolute;
+        top: 5px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    #demos > .demos-text {
+        font-size: 0.6em;
+        font-family: 'Lato', sans-serif;
+        text-align: center;    
+    }
+
+    /* on sale */
+
+    #sale {
+        width: 50px;
+        height: 50px;
+        background-color: white;
+        box-shadow: #505050 0 0 18px 1px;
+        border-radius: 10%;
+        text-align: center;
+        cursor: pointer;
+        position: fixed;
+        top: calc(200px + 50px + 10px);
+        right: 10px;
+        z-index: 999;
+    }
+
+    #sale>.sale-currency,
+    #sale>.sale-value {
+        font-family: 'Lato', sans-serif;
+        color: rgb(115, 255, 87);
+        display: inline-block;
+    }
+    #sale > .sale-currency {
+        font-size: 0.6em;
+    }
+    #sale > .sale-value {
+        font-size: 0.8em;
+    }
+
+    #sale > .sale-text {
+        font-size: 0.6em;
+        font-family: 'Lato', sans-serif;
+        margin-top: 5px;
+    }
+
+    /* chevron on top */
+
+    #chevron-to-top {
+        width: 40px;
+        height: 30px;
+        background-color: rgba(255,255,255,0.2);
+        color: white;
+        text-align: center;
+        border-top-left-radius: 10%;
+        border-top-right-radius: 10%;
+        padding-top: 5px;
+        cursor: pointer;
+        position: fixed;
+        right: 100px;
+        bottom: 0;
+        z-index: 999;
+    }
 
 /* END elementi FIXED */
