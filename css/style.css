@@ -439,3 +439,22 @@ footer > .copyright {
 }
 
 /* END footer */
+
+/* elementi FIXED */
+
+#chevron-to-top {
+    width: 40px;
+    height: 30px;
+    background-color: rgba(255,255,255,0.2);
+    color: white;
+    text-align: center;
+    border-top-left-radius: 10%;
+    border-top-right-radius: 10%;
+    padding-top: 5px;
+    cursor: pointer;
+    position: fixed;
+    right: 100px;
+    bottom: 0;
+}
+
+/* END elementi FIXED */

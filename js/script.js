@@ -35,7 +35,7 @@ var app = new Vue ({
 
                     phone: '+1 (555) 555-1212'
 
-                },
+                }, /* chiusura address */
 
                 socialIcons: {
 
@@ -46,12 +46,21 @@ var app = new Vue ({
                     youtube: 'fab fa-youtube',
 
                     instagram: 'fab fa-instagram'
-                }
 
-            },
+                } /* chiusura socialIcons */
+
+            }, /* chiusura footerCenter */
 
             footerAppointment: 'img/avadabarbers_footer_appointment_image-400x312.png'
 
+        } /* chiusura footerMenu */
+
+    }, /* chiusura data */
+    
+    methods: {
+
+        toTop(){
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
     }
