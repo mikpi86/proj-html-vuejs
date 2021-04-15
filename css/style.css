@@ -78,6 +78,9 @@ body {
         cursor: pointer;
         display: inline-block;
     }
+    .ms-button-special {
+        border: none;
+    }
     /* END button */
 
     /* fonts */
@@ -90,7 +93,8 @@ body {
     
     h5,
     h6,
-    p {
+    p
+    .footer-address > li {
         font-family: 'Lato', sans-serif;   
     }
     /* END fonts */
@@ -403,6 +407,7 @@ footer {
 footer > .main-footer {
     background-color: #111110;
     color: #505050;
+    text-align: center;
     padding: 80px 0;
 }
 .main-footer img {
@@ -410,6 +415,20 @@ footer > .main-footer {
 }
 .main-footer .button-container {
     margin-top: 20px;
+}
+
+#footerLogo {
+    width: 60%;
+    margin-bottom: 40px;
+}
+
+.footer-center > .social-icons i {
+    color: white;
+    margin: 0 10px;
+    cursor: pointer;
+}
+.footer-center>.social-icons i:hover {
+    color: #ae8652;
 }
 
 footer > .copyright {
@@ -420,9 +439,3 @@ footer > .copyright {
 }
 
 /* END footer */
-
-/* DEBUG */
-
-.debug {
-    border: 2px solid orangered;
-}

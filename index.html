@@ -235,15 +235,31 @@
                 <div class="ms-wrapper flex space-between">
 
                     <div class="footer-left flex flex-column align-center">
+
                         <img :src="footerMenu.footerShop" :alt="footerMenu.footerShop">
+
                         <div class="button-container">
                             <!-- bottone all'interno di un container perché col flex non mi prendeva il display inline-block -->
                             <div class="ms-button ms-button-driftwood">shop our range now</div>
                         </div> <!-- chiusura button container -->
+
                     </div> <!-- chiusura footer left -->
 
-                    <div class="footer-center flex flex-column">
+                    <div class="footer-center flex flex-column align-center">
+                        
+                        <img id="footerLogo" :src="footerMenu.footerCenter.footerLogo" alt="Avada Barbers logo">
 
+                        <ul class="footer-address">
+                            <li v-for="element in footerMenu.footerCenter.address">{{element}}</li>
+                        </ul>
+
+                        <div class="ms-button ms-button-driftwood ms-button-special margin-20-0">follow us</div>
+
+                        <ul class="social-icons flex">
+                            <li v-for="icon in footerMenu.footerCenter.socialIcons">
+                                <i :class="icon"></i>
+                            </li>
+                        </ul>
                     </div> <!-- chiusura footer center -->
 
                     <div class="footer-right flex flex-column align-center">
@@ -258,8 +274,8 @@
 
             </div> <!-- chiusura main-footer -->
 
-            <div class="copyright debug">
-                COPYRIGHT
+            <div class="copyright">
+                <p>&copy; Copyright 2012 - 2020 &#124; Avada Theme by ThemeFusion &#124; All Rights Reserved &#124; Powered by WordPress</p>
             </div> <!-- chiusura copyright -->
 
         </footer>
